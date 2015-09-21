@@ -169,7 +169,7 @@ body a {
 }
 
 .banner {
-	background: url(../images/kasara%20night%20large.jpg) no-repeat center;
+	background: url(../images/ban3.jpg) no-repeat center;
 	min-height: 500px;
 	width: 100%;
 	-webkit-background-size: 100%;
@@ -182,6 +182,38 @@ body a {
 	background-size: cover;
 	padding-bottom: 100px;
 }
+
+.banner2 {
+	background: url(../images/ban1.jpg) no-repeat center;
+	min-height: 500px;
+	width: 100%;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+.banner3 {
+	background: url(../images/ban2.jpg) no-repeat center;
+	min-height: 500px;
+	width: 100%;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+
 .banner-info {
 	margin-top: 8em;
 }
@@ -807,6 +839,7 @@ input.text {
     
 .img-banner{
     width: 100%;
+     z-index: -99; 
 }
 
 div.c-wrapper{
