@@ -43,7 +43,7 @@
                         <li><a href="locations.html">Locations</a></li>
                         <div class="clear"></div>
                      </ul>
-                     <script type="text/javascript" src="js/responsive-nav.js"></script> 
+                     <script type="text/javascript" src="js/responsive-nav.js"></script>
                   </div>
                </div>
             </nav>
@@ -352,7 +352,7 @@
              mapTypeId: google.maps.MapTypeId.ROADMAP
            }
            var map = new google.maps.Map(mapCanvas, mapOptions)
-           
+
            var marker = new google.maps.Marker({
            position: myLatlng,
            MarkerWithLabel:"Kasara Urban Resort",
@@ -368,14 +368,14 @@
       <div class="contact">
          <div class="container">
             <div class="contact_bottom">
-               <form method="post" action="MAILTO:agent.kasaraurbanresort@gmail.com" enctype="text/plain">
+               <form id="contact-form">
                   <div class="contact-to">
-                     <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                     <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
-                     <input type="text" class="text" value="Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
+                     <input id="contact-name" type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                     <input id="contact-email" type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
+                     <input id="contact-number" type="text" class="text" value="Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
                   </div>
                   <div class="text2">
-                     <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+                     <textarea id="contact-message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
                   </div>
                   <div> <input type="submit" class="submit" value="Send Message"></div>
                </form>
@@ -391,11 +391,28 @@
             </div>
          </div>
       </div>
-      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/bootstrap.min.js"></script>
       <script src="js/jquery.flexslider.js"></script>
       <script src="js/lightbox.min.js"></script>
       <script>
          $('a .smooth-scroll').smoothScroll();
+         $('#contact-form').on('submit',function(e){
+           e.preventDefault();
+           var name = $("#contact-name").val();
+           var number = $("#contact-number").val();
+           var email = $("#contact-email").val();
+           var mess = $("#contact-message").val();
+           //var URL http://agent-kasararesidence.rhcloud.com/sendMessage?name=johnlloyd&number=09156597241&message=hi
+
+            $.get( "http://agent-kasararesidence.rhcloud.com/sendMessage",
+               { name: name,
+                number: number,
+                message:mess
+             } )  .done(function( data ) {
+                  alert( "Message was successfully sent:");
+              });
+                alert( "Message was successfully sent:");
+         })
       </script>
    </body>
 </html>
