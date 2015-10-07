@@ -69,7 +69,7 @@
         </div>
       </div>
       <div id="gallery" class="content_white">
-        <h2><font color="#339999">Live the best days of life at Kasara Urban Resort</h2>
+        <h2><font color="#339999">Live the best days of life at Kasara Urban Resort</font></h2>
       </div>
       <div class="c-wrapper">
         <div id="carousel-example-generic" class="carousel slide">
@@ -131,10 +131,10 @@
             <div class="col-mg-3 col-xs-3 feature_grid1"> <i class="fa fa-graduation-cap fa-3x"></i>
               <h3 class="m_1">Schools</h3>
               <u1>
-                <li >St.Paul</li>
-                <li >La Salle GreenHills</li>
+                <li>St.Paul</li>
+                <li>La Salle GreenHills</li>
                 <li>University Of the Philippines Diliman</li>
-                <li >Ateneo</li>
+                <li>Ateneo</li>
                 <li >Miriam College</li>
               </ul>
             </div>
@@ -183,26 +183,48 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    <div class="content_white">
-      <h2><font color="#339999">Contact Us</font></h2>
-      <p>You don't need to go far as Kasara offers you world class vacation paradise all year round.</p>
-    </div>
-    <div class="contact">
-      <div class="container">
-        <div class="contact_bottom">
-           <form id="contact-form">
-              <div class="contact-to">
-                 <input id="contact-name" type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                 <input id="contact-email" type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
-                 <input id="contact-number" type="text" class="text" value="Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
+       <div id="about-section" class="about-info">
+          <div class="container">
+             <div class="row">
+            <div class="col-md-4">
+                 <div class="block-heading-two">
+                   <h2><font color="#339999">Contact Information</font></h2>
+                 </div>
+                <address class="lead">
+                <strong>Kasara Urban Resort Residences</strong><br>
+                    Eagle St C5 Road Pasig City, Eagle Avenue, Pasig
+                    Metro Manila Philippines<br>
+                <abbr title="Phone"></abbr> 0917-569-5675 / 0917-241-6654
+              </address>
               </div>
-              <div class="text2">
-                 <textarea id="contact-message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+                <div class="col-md-8">
+                   <div class="block-heading-two">
+                     <h2><font color="#339999">Send us a message</font></h2>
+                   </div>
+                   <div class="contact">
+                         <div class="contact_bottom">
+                            <form id="contact-form">
+                               <div class="contact-to">
+                                  <input required id="contact-name"
+                                  type="text" class="text" placeholder="Name">
+                                  <input required id="contact-email" type="text"
+                                  style="margin-left: 5px"
+                                  placeholder="Email">
+                                  <input required id="contact-number" type="text" class="text"
+                                   style="margin-left: 5px"
+                                   placeholder="Contact Number">
+                               </div>
+                               <div class="text2">
+                                  <textarea id="contact-message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+                               </div>
+                               <div> <input type="submit" class="submit" value="Send Message"></div>
+                            </form>
+                         </div>
+                      </div>
+                   </div>
               </div>
-              <div> <input type="submit" class="submit" value="Send Message"></div>
-           </form>
-        </div>
-      </div>
+             </div>
+          </div>
     </div>
     <div id="map-canvas"></div>
     <div class="footer">

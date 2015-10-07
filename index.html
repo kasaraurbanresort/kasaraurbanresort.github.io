@@ -361,27 +361,49 @@
          }
          google.maps.event.addDomListener(window, 'load', initialize);
       </script>
-      <div class="content_white">
-         <h2><font color="#339999">Contact Us</font></h2>
-         <p>You don't need to go far as Kasara offers you world class vacation paradise all year round.</p>
-      </div>
-      <div class="contact">
-         <div class="container">
-            <div class="contact_bottom">
-               <form id="contact-form">
-                  <div class="contact-to">
-                     <input id="contact-name" type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                     <input id="contact-email" type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
-                     <input id="contact-number" type="text" class="text" value="Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
-                  </div>
-                  <div class="text2">
-                     <textarea id="contact-message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
-                  </div>
-                  <div> <input type="submit" class="submit" value="Send Message"></div>
-               </form>
+         <div id="about-section" class="about-info">
+            <div class="container">
+               <div class="row">
+              <div class="col-md-4">
+                   <div class="block-heading-two">
+                     <h2><font color="#339999">Contact Information</font></h2>
+                   </div>
+                  <address class="lead">
+                  <strong>Kasara Urban Resort Residences</strong><br>
+                      Eagle St C5 Road Pasig City, Eagle Avenue, Pasig
+                      Metro Manila Philippines<br>
+                  <abbr title="Phone"></abbr> 0917-569-5675 / 0917-241-6654
+                </address>
+                </div>
+                  <div class="col-md-8">
+                     <div class="block-heading-two">
+                       <h2><font color="#339999">Send us a message</font></h2>
+                     </div>
+                     <div class="contact">
+                           <div class="contact_bottom">
+                              <form id="contact-form">
+                                 <div class="contact-to">
+                                    <input required id="contact-name"
+                                    type="text" class="text" placeholder="Name">
+                                    <input required id="contact-email" type="text"
+                                    style="margin-left: 5px"
+                                    placeholder="Email">
+                                    <input required id="contact-number" type="text" class="text"
+                                     style="margin-left: 5px"
+                                     placeholder="Contact Number">
+                                 </div>
+                                 <div class="text2">
+                                    <textarea id="contact-message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+                                 </div>
+                                 <div> <input type="submit" class="submit" value="Send Message"></div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                </div>
+               </div>
             </div>
-         </div>
-      </div>
+
       <div id="map-canvas"></div>
       <div class="footer">
          <div class="content_green">
@@ -404,6 +426,17 @@
            var mess = $("#contact-message").val();
            //var URL http://agent-kasararesidence.rhcloud.com/sendMessage?name=johnlloyd&number=09156597241&message=hi
 
+            var form = $('#contact-form')[0].checkValidity();
+            if(number.length <= 0){
+                alert("Number field is required")
+            }
+
+            if(email.length <= 0){
+                alert("email is required")
+            }
+            alert(number.length);
+
+            if(email.length >0 && number.length > 0){
             $.get( "http://agent-kasararesidence.rhcloud.com/sendMessage",
                { name: name,
                 number: number,
@@ -412,6 +445,7 @@
                   alert( "Message was successfully sent:");
               });
                 alert( "Message was successfully sent:");
+                }
          })
       </script>
    </body>
