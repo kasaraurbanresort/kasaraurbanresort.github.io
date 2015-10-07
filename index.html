@@ -2,6 +2,8 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
+      <meta name="description" content="Kasara" />
+      <meta name="keywords" content="Kasara Urban Resort Residences Condominiums, Kasara, Empire East, Tiendesitas, Eastwood" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta property="og:title" content="Kasara Urban Resort" />
       <meta property="og:url" content="http://kasararesidence.com" />
@@ -426,17 +428,6 @@
            var mess = $("#contact-message").val();
            //var URL http://agent-kasararesidence.rhcloud.com/sendMessage?name=johnlloyd&number=09156597241&message=hi
 
-            var form = $('#contact-form')[0].checkValidity();
-            if(number.length <= 0){
-                alert("Number field is required")
-            }
-
-            if(email.length <= 0){
-                alert("email is required")
-            }
-            alert(number.length);
-
-            if(email.length >0 && number.length > 0){
             $.get( "http://agent-kasararesidence.rhcloud.com/sendMessage",
                { name: name,
                 number: number,
@@ -446,7 +437,7 @@
                   alert( "Message was successfully sent:");
               });
                 alert( "Message was successfully sent:");
-                }
+
          })
       </script>
    </body>
