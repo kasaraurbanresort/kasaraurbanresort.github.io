@@ -251,7 +251,8 @@
          $.get( "http://agent-kasararesidence.rhcloud.com/sendMessage",
             { name: name,
              number: number,
-             message:mess
+             message:mess,
+             email: email
           } )  .done(function( data ) {
                alert( "Message was successfully sent:");
            });
